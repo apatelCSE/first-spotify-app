@@ -114,6 +114,7 @@
           if (access_token) {
             $.ajax({
                 url: 'https://api.spotify.com/v1/me',
+                type: "GET",
                 headers: {
                   'Authorization': 'Bearer ' + access_token
                 },
@@ -131,8 +132,8 @@
 
           document.getElementById('login-button').addEventListener('click', function() {
 
-            var client_id = 'CLIENT_ID'; // Your client id
-            var redirect_uri = 'REDIRECT_URI'; // Your redirect uri
+            var client_id = '2fc74c919fe3493bba402b36ae82eeac'; // Your client id
+            var redirect_uri = 'http://localhost:8888'; // Your redirect uri
 
             var state = generateRandomString(16);
 
